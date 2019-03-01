@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Delivery: NSObject {
+class DeliveryOrder: NSObject {
     let map: Map
     let deliveryPoints: [DeliveryPoint]
     

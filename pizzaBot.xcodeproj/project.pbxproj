@@ -10,7 +10,8 @@
 		D8E4FE8722297BF400763316 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE8622297BF400763316 /* main.swift */; };
 		D8E4FE8F22297D4400763316 /* DeliveryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE8E22297D4400763316 /* DeliveryPoint.swift */; };
 		D8E4FE9122297DC000763316 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE9022297DC000763316 /* Map.swift */; };
-		D8E4FE952229809700763316 /* Delivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE942229809700763316 /* Delivery.swift */; };
+		D8E4FE952229809700763316 /* DeliveryOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE942229809700763316 /* DeliveryOrder.swift */; };
+		D8E4FE98222981C200763316 /* InputParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE97222981C200763316 /* InputParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +31,8 @@
 		D8E4FE8622297BF400763316 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D8E4FE8E22297D4400763316 /* DeliveryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPoint.swift; sourceTree = "<group>"; };
 		D8E4FE9022297DC000763316 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
-		D8E4FE942229809700763316 /* Delivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delivery.swift; sourceTree = "<group>"; };
+		D8E4FE942229809700763316 /* DeliveryOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrder.swift; sourceTree = "<group>"; };
+		D8E4FE97222981C200763316 /* InputParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		D8E4FE8522297BF400763316 /* pizzaBot */ = {
 			isa = PBXGroup;
 			children = (
+				D8E4FE96222981B200763316 /* helper */,
 				D8E4FE8D22297CC100763316 /* model */,
 				D8E4FE8622297BF400763316 /* main.swift */,
 			);
@@ -74,9 +77,17 @@
 			children = (
 				D8E4FE8E22297D4400763316 /* DeliveryPoint.swift */,
 				D8E4FE9022297DC000763316 /* Map.swift */,
-				D8E4FE942229809700763316 /* Delivery.swift */,
+				D8E4FE942229809700763316 /* DeliveryOrder.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		D8E4FE96222981B200763316 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				D8E4FE97222981C200763316 /* InputParser.swift */,
+			);
+			path = helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E4FE98222981C200763316 /* InputParser.swift in Sources */,
 				D8E4FE8F22297D4400763316 /* DeliveryPoint.swift in Sources */,
-				D8E4FE952229809700763316 /* Delivery.swift in Sources */,
+				D8E4FE952229809700763316 /* DeliveryOrder.swift in Sources */,
 				D8E4FE9122297DC000763316 /* Map.swift in Sources */,
 				D8E4FE8722297BF400763316 /* main.swift in Sources */,
 			);

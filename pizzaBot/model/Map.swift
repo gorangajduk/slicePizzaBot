@@ -11,6 +11,33 @@ class Map: NSObject {
     let width: Int
     let height: Int
     
+    // input string must be in [width]x[height] format
+    convenience init?(fromString: String) {
+        let mapArray = fromString.split(separator: "x")
+        
+        if mapArray.count != 2 {
+            // invalid input string
+            return nil
+        }
+        
+        let mapWidthTemp = String(mapArray[0])
+        let mapHeightTemp = String(mapArray[1])
+        
+        let mapWidth = Int(mapWidthTemp)
+        let mapHeight = Int(mapHeightTemp)
+        if (mapWidth != nil) &&
+            (mapHeight != nil) {
+            // map can not be created from negative values
+            if mapWidth! < 0 ||
+                mapHeight! < 0 {
+                return nil
+            }
+            self.init(sizeWidth: mapWidth!, sizeHeight: mapHeight!)
+        }
+        
+        return nil
+    }
+    
     init?(sizeWidth: Int, sizeHeight: Int) {
         // coordinates cannot be negative numbers
         if sizeWidth >= 0  &&
