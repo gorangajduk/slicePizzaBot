@@ -43,7 +43,15 @@ class InputParserTests: XCTestCase {
         deliveryOrder = InputParser.parseInput(inputString: input)
         XCTAssertNil(deliveryOrder, "delivery order should not be created from invalid input")
         
-        input = "5x5 (0, ) (1, 3) (4, 4) (4, 2) (4, 2) (0, 1) (3, 2) (2, 3) (4, 1)"
+        input = "5x5 (3, )"
+        deliveryOrder = InputParser.parseInput(inputString: input)
+        XCTAssertNil(deliveryOrder, "delivery order should not be created from invalid input")
+        
+        input = "5x5 (, 4)"
+        deliveryOrder = InputParser.parseInput(inputString: input)
+        XCTAssertNil(deliveryOrder, "delivery order should not be created from invalid input")
+        
+        input = "5x5 (0, ) (1 3) (4 4) (4 2) (4 2) (0 1) (3 2) (2 3) (4 1)"
         deliveryOrder = InputParser.parseInput(inputString: input)
         XCTAssertNil(deliveryOrder, "delivery order should not be created from invalid input")
     }
