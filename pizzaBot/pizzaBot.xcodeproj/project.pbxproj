@@ -10,6 +10,7 @@
 		D8E4FE8722297BF400763316 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE8622297BF400763316 /* main.swift */; };
 		D8E4FE8F22297D4400763316 /* DeliveryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE8E22297D4400763316 /* DeliveryPoint.swift */; };
 		D8E4FE9122297DC000763316 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE9022297DC000763316 /* Map.swift */; };
+		D8E4FE952229809700763316 /* Delivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE942229809700763316 /* Delivery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		D8E4FE8622297BF400763316 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D8E4FE8E22297D4400763316 /* DeliveryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPoint.swift; sourceTree = "<group>"; };
 		D8E4FE9022297DC000763316 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		D8E4FE942229809700763316 /* Delivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delivery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				D8E4FE8E22297D4400763316 /* DeliveryPoint.swift */,
 				D8E4FE9022297DC000763316 /* Map.swift */,
+				D8E4FE942229809700763316 /* Delivery.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E4FE8F22297D4400763316 /* DeliveryPoint.swift in Sources */,
+				D8E4FE952229809700763316 /* Delivery.swift in Sources */,
 				D8E4FE9122297DC000763316 /* Map.swift in Sources */,
 				D8E4FE8722297BF400763316 /* main.swift in Sources */,
 			);
