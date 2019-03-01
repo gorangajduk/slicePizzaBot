@@ -2,10 +2,12 @@
 //  pizzaBotTests.swift
 //  pizzaBotTests
 //
-//  Created by slice on 01/03/2019.
+//  Created by G Gajduk on 01/03/2019.
+//  Copyright © 2019 slice. All rights reserved.
 //
 
 import XCTest
+@testable import pizzaBot
 
 class pizzaBotTests: XCTestCase {
 

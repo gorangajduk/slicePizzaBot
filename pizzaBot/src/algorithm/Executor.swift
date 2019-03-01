@@ -27,7 +27,7 @@ class Executor: NSObject {
         }
         return resultString
     }
-        
+    
     func getMoveOrders(start: Point, destination: Point) -> String {
         var moveOrders = ""
         // get the distance needed to travel

@@ -16,7 +16,7 @@ class InputParser: NSObject {
         do {
             // create the regex
             let regex = try NSRegularExpression(pattern: inputPattern,
-                                                    options: [])
+                                                options: [])
             // range of the input string
             let range = NSRange(inputString.startIndex..<inputString.endIndex,
                                 in: inputString)
