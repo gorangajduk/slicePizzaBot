@@ -2,7 +2,7 @@
 //  pizzaBotTests.swift
 //  pizzaBotTests
 //
-//  Created by G Gajduk on 01/03/2019.
+//  Created by slice on 01/03/2019.
 //  Copyright © 2019 slice. All rights reserved.
 //
 
@@ -19,7 +19,14 @@ class pizzaBotTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testPizzaBot() {
+        let bot = SliceBot()
+        let input = ""
+        let expectedinstructions = ""
+        let deliveryInstructions = bot.deliver(input: input)
+        XCTAssertTrue(deliveryInstructions == expectedinstructions, "delivery instructions incorecct")
+        
+        
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
