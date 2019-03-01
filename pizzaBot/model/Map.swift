@@ -49,4 +49,25 @@ class Map: NSObject {
             return nil
         }
     }
+    
+    func isDeliveryPointValid(deliveryPoint: DeliveryPoint) -> Bool {
+        // point is considered valid if it is inside the map
+        if deliveryPoint.x > self.width {
+            return false
+        }
+        
+        if deliveryPoint.x < 0 {
+            return false
+        }
+        
+        if deliveryPoint.y > self.height {
+            return false
+        }
+        
+        if deliveryPoint.y < 0 {
+            return false
+        }
+        
+        return true
+    }
 }

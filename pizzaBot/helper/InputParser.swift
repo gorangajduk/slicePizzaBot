@@ -11,34 +11,42 @@ class InputParser: NSObject {
     static let inputPattern = "(\\d+[x]\\d+)(\\s\\(\\d+\\,\\s\\d\\))+)"
     
     class func parseInput(inputString: String) -> DeliveryOrder? {
+        var deliveryOrder: DeliveryOrder?
         // create the regex
-        let regex = try NSRegularExpression(pattern: inputPattern,
-                                            options: [])
-        // range of the input string
-        let range = NSRange(inputString.startIndex..<inputString.endIndex,
-                            in: inputString)
-        
-        regex.enumerateMatches(in: inputString,
-                               options: [],
-                               range: range) { (match, _, stop) in
-                                guard let match = match else { return }
-                                
-                                if match.numberOfRanges == 2,
-                                    let mapSizeRange = Range(match.range(at: 1),
-                                                             in: inputString),
-                                    let locationsArrayRange = Range(match.range(at: 2),
-                                                                    in: inputString) {
-                                    // Create the Map
-                                    let mapSizeInputString = String(inputString[mapSizeRange])
-                                    let map = Map.init(fromString: mapSizeInputString)
+        do {
+            let regex = try NSRegularExpression(pattern: inputPattern,
+                                                    options: [])
+            // range of the input string
+            let range = NSRange(inputString.startIndex..<inputString.endIndex,
+                                in: inputString)
+            
+            regex.enumerateMatches(in: inputString,
+                                   options: [],
+                                   range: range) { (match, _, stop) in
+                                    guard let match = match else { return }
                                     
-                                    // Create the Delivery Points
-                                    let locationsArrayInputString = String(inputString[locationsArrayRange])
-                                    let deliveryPoints = InputParser.generateDeliveryPoints(fromString: locationsArrayInputString)
-                                    return DeliveryOrder(m: map, dp: deliveryPoints)
-                                }
+                                    if match.numberOfRanges == 2,
+                                        let mapSizeRange = Range(match.range(at: 1),
+                                                                 in: inputString),
+                                        let locationsArrayRange = Range(match.range(at: 2),
+                                                                        in: inputString) {
+                                        // Create the Map
+                                        let mapSizeInputString = String(inputString[mapSizeRange])
+                                        let map = Map.init(fromString: mapSizeInputString)
+                                        
+                                        // Create the Delivery Points
+                                        let locationsArrayInputString = String(inputString[locationsArrayRange])
+                                        let deliveryPoints = InputParser.generateDeliveryPoints(fromString: locationsArrayInputString)
+                                        if (map != nil) {
+                                            deliveryOrder = DeliveryOrder(m: map!,
+                                                                          dp: deliveryPoints)
+                                        }
+                                    }
+            }
+        } catch {
+            return nil
         }
-        return nil
+        return deliveryOrder
     }
     
     class func generateDeliveryPoints(fromString: String) -> [DeliveryPoint] {

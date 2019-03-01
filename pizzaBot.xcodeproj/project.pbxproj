@@ -12,6 +12,8 @@
 		D8E4FE9122297DC000763316 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE9022297DC000763316 /* Map.swift */; };
 		D8E4FE952229809700763316 /* DeliveryOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE942229809700763316 /* DeliveryOrder.swift */; };
 		D8E4FE98222981C200763316 /* InputParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE97222981C200763316 /* InputParser.swift */; };
+		D8E4FE9A22298E9400763316 /* DeliveryValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE9922298E9400763316 /* DeliveryValidator.swift */; };
+		D8E4FE9D2229914800763316 /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE9C2229914800763316 /* Executor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +35,8 @@
 		D8E4FE9022297DC000763316 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		D8E4FE942229809700763316 /* DeliveryOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryOrder.swift; sourceTree = "<group>"; };
 		D8E4FE97222981C200763316 /* InputParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputParser.swift; sourceTree = "<group>"; };
+		D8E4FE9922298E9400763316 /* DeliveryValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryValidator.swift; sourceTree = "<group>"; };
+		D8E4FE9C2229914800763316 /* Executor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 		D8E4FE8522297BF400763316 /* pizzaBot */ = {
 			isa = PBXGroup;
 			children = (
+				D8E4FE9B222990BD00763316 /* algorithm */,
 				D8E4FE96222981B200763316 /* helper */,
 				D8E4FE8D22297CC100763316 /* model */,
 				D8E4FE8622297BF400763316 /* main.swift */,
@@ -86,8 +91,17 @@
 			isa = PBXGroup;
 			children = (
 				D8E4FE97222981C200763316 /* InputParser.swift */,
+				D8E4FE9922298E9400763316 /* DeliveryValidator.swift */,
 			);
 			path = helper;
+			sourceTree = "<group>";
+		};
+		D8E4FE9B222990BD00763316 /* algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				D8E4FE9C2229914800763316 /* Executor.swift */,
+			);
+			path = algorithm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +164,9 @@
 				D8E4FE8F22297D4400763316 /* DeliveryPoint.swift in Sources */,
 				D8E4FE952229809700763316 /* DeliveryOrder.swift in Sources */,
 				D8E4FE9122297DC000763316 /* Map.swift in Sources */,
+				D8E4FE9A22298E9400763316 /* DeliveryValidator.swift in Sources */,
 				D8E4FE8722297BF400763316 /* main.swift in Sources */,
+				D8E4FE9D2229914800763316 /* Executor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

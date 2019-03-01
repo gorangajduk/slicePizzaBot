@@ -7,9 +7,9 @@
 
 import Foundation
 
-class DeliveryPoint: NSObject {
-    let x: Int
-    let y: Int
+class Point: NSObject {
+    var x: Int
+    var y: Int
     
     init?(coordinateX: Int, coordinateY: Int) {
         // coordinates cannot be negative numbers
@@ -22,7 +22,9 @@ class DeliveryPoint: NSObject {
             return nil
         }
     }
-    
+}
+
+class DeliveryPoint: Point {
     // input string must be in [x],[y] format
     convenience init?(fromString: String) {
         let array = fromString.split(separator: ",")
