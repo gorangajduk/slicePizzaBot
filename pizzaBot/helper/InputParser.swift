@@ -2,18 +2,19 @@
 //  InputValidator.swift
 //  pizzaBot
 //
-//  Created by G Gajduk on 01/03/2019.
+//  Created by slice on 01/03/2019.
 //
 
 import Foundation
 
 class InputParser: NSObject {
-    static let inputPattern = "(\\d+[x]\\d+)(\\s\\(\\d+\\,\\s\\d\\))+)"
+    static let inputPattern = "^(\\d+x\\d+)((\\s\\(\\d+\\,\\s\\d\\))+)"
     
     class func parseInput(inputString: String) -> DeliveryOrder? {
         var deliveryOrder: DeliveryOrder?
-        // create the regex
+        
         do {
+            // create the regex
             let regex = try NSRegularExpression(pattern: inputPattern,
                                                     options: [])
             // range of the input string
@@ -25,7 +26,7 @@ class InputParser: NSObject {
                                    range: range) { (match, _, stop) in
                                     guard let match = match else { return }
                                     
-                                    if match.numberOfRanges == 2,
+                                    if match.numberOfRanges == 4,
                                         let mapSizeRange = Range(match.range(at: 1),
                                                                  in: inputString),
                                         let locationsArrayRange = Range(match.range(at: 2),

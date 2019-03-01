@@ -2,7 +2,7 @@
 //  Map.swift
 //  pizzaBot
 //
-//  Created by G Gajduk on 01/03/2019.
+//  Created by slice on 01/03/2019.
 //
 
 import Foundation
@@ -33,9 +33,9 @@ class Map: NSObject {
                 return nil
             }
             self.init(sizeWidth: mapWidth!, sizeHeight: mapHeight!)
+        } else {
+            return nil
         }
-        
-        return nil
     }
     
     init?(sizeWidth: Int, sizeHeight: Int) {

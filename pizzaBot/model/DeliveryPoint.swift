@@ -2,7 +2,7 @@
 //  DeliveryPoint.swift
 //  pizzaBot
 //
-//  Created by G Gajduk on 01/03/2019.
+//  Created by slice on 01/03/2019.
 //
 
 import Foundation
@@ -47,7 +47,8 @@ class DeliveryPoint: Point {
                 return nil
             }
             self.init(coordinateX: pointX!, coordinateY: pointY!)
-        }        
-        return nil
+        } else {
+            return nil
+        }
     }
 }
