@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D8E4FE8722297BF400763316 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE8622297BF400763316 /* main.swift */; };
+		D8E4FE8F22297D4400763316 /* DeliveryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE8E22297D4400763316 /* DeliveryPoint.swift */; };
+		D8E4FE9122297DC000763316 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4FE9022297DC000763316 /* Map.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		D8E4FE8322297BF400763316 /* pizzaBot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pizzaBot; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E4FE8622297BF400763316 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D8E4FE8E22297D4400763316 /* DeliveryPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPoint.swift; sourceTree = "<group>"; };
+		D8E4FE9022297DC000763316 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,19 @@
 		D8E4FE8522297BF400763316 /* pizzaBot */ = {
 			isa = PBXGroup;
 			children = (
+				D8E4FE8D22297CC100763316 /* model */,
 				D8E4FE8622297BF400763316 /* main.swift */,
 			);
 			path = pizzaBot;
+			sourceTree = "<group>";
+		};
+		D8E4FE8D22297CC100763316 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D8E4FE8E22297D4400763316 /* DeliveryPoint.swift */,
+				D8E4FE9022297DC000763316 /* Map.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +132,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E4FE8F22297D4400763316 /* DeliveryPoint.swift in Sources */,
+				D8E4FE9122297DC000763316 /* Map.swift in Sources */,
 				D8E4FE8722297BF400763316 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
