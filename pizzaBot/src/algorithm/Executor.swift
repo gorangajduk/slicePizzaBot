@@ -10,13 +10,13 @@ import Foundation
 class Executor: NSObject {
     var currentLocation: Point
     let deliveryOrder: DeliveryOrder
-    
+
     init(dOrder: DeliveryOrder) {
         self.deliveryOrder = dOrder
         // starting position is 0, 0
         currentLocation = Point(coordinateX: 0, coordinateY: 0)!
     }
-    
+
     func executeDelivery() -> String {
         var resultString = ""
         for deliveryPoint in deliveryOrder.deliveryPoints {
@@ -27,13 +27,13 @@ class Executor: NSObject {
         }
         return resultString
     }
-    
+
     func getMoveOrders(start: Point, destination: Point) -> String {
         var moveOrders = ""
         // get the distance needed to travel
-        let horizontalDistance = destination.x - start.x
-        let verticalDistance = destination.y - start.y
-        
+        let horizontalDistance = destination.xCoordinate - start.xCoordinate
+        let verticalDistance = destination.yCoordinate - start.yCoordinate
+
         // first we move horizontaly
         // find the direction of travel
         // initial direction is East
@@ -42,7 +42,7 @@ class Executor: NSObject {
         if horizontalDistance < 0 {
             horizontalDirection = "W"
         }
-        
+
         // get the number of steps
         let horizontalSteps = abs(horizontalDistance)
         var counter = 0
@@ -50,7 +50,7 @@ class Executor: NSObject {
             moveOrders.append(horizontalDirection)
             counter += 1
         }
-        
+
         // then vertically
         // find the direction of travel
         // initial direction is North
@@ -59,7 +59,7 @@ class Executor: NSObject {
         if verticalDistance < 0 {
             verticalDirection = "S"
         }
-        
+
         let verticalSteps = abs(verticalDistance)
         counter = 0
         while counter < verticalSteps {

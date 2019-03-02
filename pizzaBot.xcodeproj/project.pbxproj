@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733D12D02888C3DDF340CC12 /* libPods-pizzaBotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1B843272657747EEEC1EC1 /* libPods-pizzaBotTests.a */; };
+		D76BE41FA1672ECA3DB45AE3 /* libPods-pizzaBot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8759676579155BFF95F53B8C /* libPods-pizzaBot.a */; };
 		D83C565E2229B23100222029 /* pizzaBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83C56542229B23100222029 /* pizzaBot.framework */; };
 		D83C56632229B23100222029 /* pizzaBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C56622229B23100222029 /* pizzaBotTests.swift */; };
 		D83C56652229B23100222029 /* pizzaBot.h in Headers */ = {isa = PBXBuildFile; fileRef = D83C56572229B23100222029 /* pizzaBot.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01671E35FDD4EEB7863CAD7D /* Pods-pizzaBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pizzaBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pizzaBot/Pods-pizzaBot.debug.xcconfig"; sourceTree = "<group>"; };
+		8759676579155BFF95F53B8C /* libPods-pizzaBot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pizzaBot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83C56542229B23100222029 /* pizzaBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pizzaBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83C56572229B23100222029 /* pizzaBot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pizzaBot.h; sourceTree = "<group>"; };
 		D83C56582229B23100222029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +57,10 @@
 		D8B124862229B760006D0853 /* DeliveryPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryPointTests.swift; sourceTree = "<group>"; };
 		D8B124882229B832006D0853 /* InputParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputParserTests.swift; sourceTree = "<group>"; };
 		D8B1248A2229BB30006D0853 /* DeliveryValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryValidatorTests.swift; sourceTree = "<group>"; };
+		DD1B843272657747EEEC1EC1 /* libPods-pizzaBotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pizzaBotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83DDC621323AAA5BB00B668 /* Pods-pizzaBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pizzaBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-pizzaBot/Pods-pizzaBot.release.xcconfig"; sourceTree = "<group>"; };
+		E92A0EF9DEDADFA2ED7EC0BA /* Pods-pizzaBotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pizzaBotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pizzaBotTests/Pods-pizzaBotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F33E615A7FDAFE68B04A75E4 /* Pods-pizzaBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pizzaBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pizzaBotTests/Pods-pizzaBotTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76BE41FA1672ECA3DB45AE3 /* libPods-pizzaBot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,18 +77,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				D83C565E2229B23100222029 /* pizzaBot.framework in Frameworks */,
+				733D12D02888C3DDF340CC12 /* libPods-pizzaBotTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		405CE7381E8602916E502316 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01671E35FDD4EEB7863CAD7D /* Pods-pizzaBot.debug.xcconfig */,
+				E83DDC621323AAA5BB00B668 /* Pods-pizzaBot.release.xcconfig */,
+				E92A0EF9DEDADFA2ED7EC0BA /* Pods-pizzaBotTests.debug.xcconfig */,
+				F33E615A7FDAFE68B04A75E4 /* Pods-pizzaBotTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5F990BD0EA5E8CA7E9FAC300 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8759676579155BFF95F53B8C /* libPods-pizzaBot.a */,
+				DD1B843272657747EEEC1EC1 /* libPods-pizzaBotTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D83C564A2229B23100222029 = {
 			isa = PBXGroup;
 			children = (
 				D83C56562229B23100222029 /* pizzaBot */,
 				D83C56612229B23100222029 /* pizzaBotTests */,
 				D83C56552229B23100222029 /* Products */,
+				405CE7381E8602916E502316 /* Pods */,
+				5F990BD0EA5E8CA7E9FAC300 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,10 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D83C56682229B23100222029 /* Build configuration list for PBXNativeTarget "pizzaBot" */;
 			buildPhases = (
+				4149580B66A4752A72CA2126 /* [CP] Check Pods Manifest.lock */,
 				D83C564F2229B23100222029 /* Headers */,
 				D83C56502229B23100222029 /* Sources */,
 				D83C56512229B23100222029 /* Frameworks */,
 				D83C56522229B23100222029 /* Resources */,
+				D847ABB3222ABCAB0069DBBA /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -206,6 +240,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D83C566B2229B23100222029 /* Build configuration list for PBXNativeTarget "pizzaBotTests" */;
 			buildPhases = (
+				14771F44C4FBB2BB0623AD9C /* [CP] Check Pods Manifest.lock */,
 				D83C56592229B23100222029 /* Sources */,
 				D83C565A2229B23100222029 /* Frameworks */,
 				D83C565B2229B23100222029 /* Resources */,
@@ -273,6 +308,71 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14771F44C4FBB2BB0623AD9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pizzaBotTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4149580B66A4752A72CA2126 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pizzaBot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D847ABB3222ABCAB0069DBBA /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D83C56502229B23100222029 /* Sources */ = {
@@ -437,6 +537,7 @@
 		};
 		D83C56692229B23100222029 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01671E35FDD4EEB7863CAD7D /* Pods-pizzaBot.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -463,6 +564,7 @@
 		};
 		D83C566A2229B23100222029 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E83DDC621323AAA5BB00B668 /* Pods-pizzaBot.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -488,6 +590,7 @@
 		};
 		D83C566C2229B23100222029 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E92A0EF9DEDADFA2ED7EC0BA /* Pods-pizzaBotTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -506,6 +609,7 @@
 		};
 		D83C566D2229B23100222029 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F33E615A7FDAFE68B04A75E4 /* Pods-pizzaBotTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

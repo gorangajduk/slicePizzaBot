@@ -10,19 +10,19 @@ import Foundation
 class Map: NSObject {
     let width: Int
     let height: Int
-    
+
     // input string must be in [width]x[height] format
     convenience init?(fromString: String) {
         let mapArray = fromString.split(separator: "x")
-        
+
         if mapArray.count != 2 {
             // invalid input string
             return nil
         }
-        
+
         let mapWidthTemp = String(mapArray[0])
         let mapHeightTemp = String(mapArray[1])
-        
+
         let mapWidth = Int(mapWidthTemp)
         let mapHeight = Int(mapHeightTemp)
         if (mapWidth != nil) &&
@@ -37,7 +37,7 @@ class Map: NSObject {
             return nil
         }
     }
-    
+
     init?(sizeWidth: Int, sizeHeight: Int) {
         // coordinates cannot be negative numbers
         if sizeWidth >= 0  &&
@@ -49,25 +49,25 @@ class Map: NSObject {
             return nil
         }
     }
-    
+
     func isDeliveryPointValid(deliveryPoint: DeliveryPoint) -> Bool {
         // point is considered valid if it is inside the map
-        if deliveryPoint.x > self.width {
+        if deliveryPoint.xCoordinate > self.width {
             return false
         }
-        
-        if deliveryPoint.x < 0 {
+
+        if deliveryPoint.xCoordinate < 0 {
             return false
         }
-        
-        if deliveryPoint.y > self.height {
+
+        if deliveryPoint.yCoordinate > self.height {
             return false
         }
-        
-        if deliveryPoint.y < 0 {
+
+        if deliveryPoint.yCoordinate < 0 {
             return false
         }
-        
+
         return true
     }
 }

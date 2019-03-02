@@ -10,9 +10,9 @@ import Foundation
 class DeliveryOrder: NSObject {
     let map: Map
     let deliveryPoints: [DeliveryPoint]
-    
-    init(m: Map, dp: [DeliveryPoint]) {
-        self.map  = m
-        self.deliveryPoints = dp
+
+    init(map: Map, dPoints: [DeliveryPoint]) {
+        self.map  = map
+        self.deliveryPoints = dPoints
     }
 }

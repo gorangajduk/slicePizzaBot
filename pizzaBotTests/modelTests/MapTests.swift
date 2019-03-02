@@ -17,30 +17,30 @@ class MapTests: XCTestCase {
         XCTAssertTrue(map?.width == 15, "map width should be 15")
         XCTAssertTrue(map?.height == 23, "map height should be 23")
     }
-    
+
     func testInvalidMapCreation() {
         var input = "-13x5"
         var map = Map(fromString: input)
-        XCTAssertNil(map, "Map object should ne be created from invalid input string")
-        
+        XCTAssertNil(map, "Map object should not be created from invalid input string")
+
         input = "13x-5"
         map = Map(fromString: input)
-        XCTAssertNil(map, "Map object should ne be created from invalid input string")
-        
+        XCTAssertNil(map, "Map object should not be created from invalid input string")
+
         input = "13x"
         map = Map(fromString: input)
-        XCTAssertNil(map, "Map object should ne be created from invalid input string")
-        
+        XCTAssertNil(map, "Map object should not be created from invalid input string")
+
         input = "x5"
         map = Map(fromString: input)
-        XCTAssertNil(map, "Map object should ne be created from invalid input string")
-        
+        XCTAssertNil(map, "Map object should not be created from invalid input string")
+
         input = "x"
         map = Map(fromString: input)
-        XCTAssertNil(map, "Map object should ne be created from invalid input string")
-        
+        XCTAssertNil(map, "Map object should not be created from invalid input string")
+
         input = ""
         map = Map(fromString: input)
-        XCTAssertNil(map, "Map object should ne be created from invalid input string")        
+        XCTAssertNil(map, "Map object should not be created from invalid input string")
     }
 }

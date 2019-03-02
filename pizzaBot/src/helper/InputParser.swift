@@ -9,10 +9,10 @@ import Foundation
 
 class InputParser: NSObject {
     static let inputPattern = "^(\\d+x\\d+)((\\s\\(\\d+\\,\\s\\d\\))+)"
-    
+
     class func parseInput(inputString: String) -> DeliveryOrder? {
         var deliveryOrder: DeliveryOrder?
-        
+
         do {
             // create the regex
             let regex = try NSRegularExpression(pattern: inputPattern,
@@ -20,12 +20,12 @@ class InputParser: NSObject {
             // range of the input string
             let range = NSRange(inputString.startIndex..<inputString.endIndex,
                                 in: inputString)
-            
+
             regex.enumerateMatches(in: inputString,
                                    options: [],
                                    range: range) { (match, _, stop) in
                                     guard let match = match else { return }
-                                    
+
                                     if match.numberOfRanges == 4,
                                         let mapSizeRange = Range(match.range(at: 1),
                                                                  in: inputString),
@@ -34,14 +34,16 @@ class InputParser: NSObject {
                                         // Create the Map
                                         let mapSizeInputString = String(inputString[mapSizeRange])
                                         let map = Map.init(fromString: mapSizeInputString)
-                                        
+
                                         // Create the Delivery Points
                                         let locationsArrayInputString = String(inputString[locationsArrayRange])
-                                        let deliveryPoints = InputParser.generateDeliveryPoints(fromString: locationsArrayInputString)
-                                        if (map != nil) {
-                                            deliveryOrder = DeliveryOrder(m: map!,
-                                                                          dp: deliveryPoints)
+                                        let deliveryPoints =
+                                            InputParser.generateDeliveryPoints(fromString: locationsArrayInputString)
+                                        if map != nil {
+                                            deliveryOrder = DeliveryOrder(map: map!,
+                                                                          dPoints: deliveryPoints)
                                         }
+                                        stop.pointee = true
                                     }
             }
         } catch {
@@ -49,10 +51,10 @@ class InputParser: NSObject {
         }
         return deliveryOrder
     }
-    
+
     class func generateDeliveryPoints(fromString: String) -> [DeliveryPoint] {
         var deliveryPoints = [DeliveryPoint]()
-        
+
         // create a mutable variable of the input string
         var deliveryString = fromString
         // the input string will be in a (x, y) (x, y) ... format

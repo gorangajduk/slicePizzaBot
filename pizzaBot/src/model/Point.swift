@@ -8,15 +8,15 @@
 import Foundation
 
 class Point: NSObject {
-    var x: Int
-    var y: Int
-    
+    var xCoordinate: Int
+    var yCoordinate: Int
+
     init?(coordinateX: Int, coordinateY: Int) {
         // coordinates cannot be negative numbers
         if coordinateX >= 0  &&
             coordinateY >= 0 {
-            self.x = coordinateX
-            self.y = coordinateY
+            self.xCoordinate = coordinateX
+            self.yCoordinate = coordinateY
         } else {
             // in this case a valid delivery point can not be created
             return nil

@@ -12,65 +12,65 @@ import XCTest
 class DeliveryValidationTests: XCTestCase {
     func testvalidDelivery() {
         var map = Map(sizeWidth: 10, sizeHeight: 10)
-        
+
         var deliveryPoints = [DeliveryPoint]()
         deliveryPoints.append(DeliveryPoint(coordinateX: 2, coordinateY: 2)!)
         deliveryPoints.append(DeliveryPoint(coordinateX: 4, coordinateY: 1)!)
         deliveryPoints.append(DeliveryPoint(coordinateX: 5, coordinateY: 0)!)
-        
-        var deliveryOrder = DeliveryOrder(m: map!, dp: deliveryPoints)
-        
+
+        var deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
+
         XCTAssertTrue(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be valid")
-        
+
         map = Map(sizeWidth: 0, sizeHeight: 0)
-        
+
         deliveryPoints = [DeliveryPoint]()
         deliveryPoints.append(DeliveryPoint(coordinateX: 0, coordinateY: 0)!)
-        
-        deliveryOrder = DeliveryOrder(m: map!, dp: deliveryPoints)
-        
+
+        deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
+
         XCTAssertTrue(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be valid")
     }
-    
+
     func testInvalidDeliveries() {
         var map = Map(sizeWidth: 10, sizeHeight: 0)
-        
+
         var deliveryPoints = [DeliveryPoint]()
         deliveryPoints.append(DeliveryPoint(coordinateX: 2, coordinateY: 2)!)
-        
-        var deliveryOrder = DeliveryOrder(m: map!, dp: deliveryPoints)
+
+        var deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
         XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be invalid")
-        
+
         map = Map(sizeWidth: 1, sizeHeight: 1)
-        
+
         deliveryPoints = [DeliveryPoint]()
         deliveryPoints.append(DeliveryPoint(coordinateX: 2, coordinateY: 2)!)
-        
-        deliveryOrder = DeliveryOrder(m: map!, dp: deliveryPoints)
+
+        deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
         XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be invalid")
-        
+
         map = Map(sizeWidth: 0, sizeHeight: 1)
-        
+
         deliveryPoints = [DeliveryPoint]()
         deliveryPoints.append(DeliveryPoint(coordinateX: 2, coordinateY: 2)!)
-        
-        deliveryOrder = DeliveryOrder(m: map!, dp: deliveryPoints)
+
+        deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
         XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be invalid")
-        
+
         map = Map(sizeWidth: 10, sizeHeight: 10)
-        
+
         deliveryPoints = [DeliveryPoint]()
         deliveryPoints.append(DeliveryPoint(coordinateX: 21, coordinateY: 2)!)
-        
-        deliveryOrder = DeliveryOrder(m: map!, dp: deliveryPoints)
+
+        deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
         XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be invalid")
-        
+
         map = Map(sizeWidth: 10, sizeHeight: 10)
-        
+
         deliveryPoints = [DeliveryPoint]()
         deliveryPoints.append(DeliveryPoint(coordinateX: 1, coordinateY: 21)!)
-        
-        deliveryOrder = DeliveryOrder(m: map!, dp: deliveryPoints)
+
+        deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
         XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be invalid")
     }
 }

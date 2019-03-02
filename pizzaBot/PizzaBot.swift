@@ -24,5 +24,5 @@ class SliceBot: NSObject {
         } else {
             return "Invalid input format"
         }
-    }    
+    }
 }
