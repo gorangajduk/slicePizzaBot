@@ -7,22 +7,40 @@
 
 import Foundation
 
+/**
+ Map class containing the width and height.
+ */
 class Map: NSObject {
+    /// The width of the map.
     let width: Int
+    /// The height of the map.
     let height: Int
 
-    // input string must be in [width]x[height] format
+    /**
+     Initializes a map from string.
+     The string must be in [width]x[height] format.
+     
+     - Parameters:
+        - fromString: The input string.
+     
+     - Returns: Map or nil if the string is invalid format.
+     */
     convenience init?(fromString: String) {
+        // split the input string
         let mapArray = fromString.split(separator: "x")
 
+        // validate if the string is split in 2 parts
         if mapArray.count != 2 {
             // invalid input string
             return nil
         }
 
+        // the width of the map
         let mapWidthTemp = String(mapArray[0])
+        // the height of the map
         let mapHeightTemp = String(mapArray[1])
 
+        // cast them to Int
         let mapWidth = Int(mapWidthTemp)
         let mapHeight = Int(mapHeightTemp)
         if (mapWidth != nil) &&
@@ -38,6 +56,15 @@ class Map: NSObject {
         }
     }
 
+    /**
+     Initializes a map.
+     
+     - Parameters:
+        - sizeWidth: The width of the map.
+        - sizeHeight: The height of the map.
+     
+     - Returns: The initialised map.
+     */
     init?(sizeWidth: Int, sizeHeight: Int) {
         // coordinates cannot be negative numbers
         if sizeWidth >= 0  &&
@@ -50,6 +77,15 @@ class Map: NSObject {
         }
     }
 
+    /**
+     Verifies if a DeliveryPoint is valid in the map.
+     A DeliveryPoint is valid if its coordinates are inside the map.
+     
+     - Parameters:
+        - deliveryPoint: DeliveryPoint that is being validated.
+     
+     - Returns: True if the point is inside the map or false if one of the points coordinates is ouside the map.
+     */
     func isDeliveryPointValid(deliveryPoint: DeliveryPoint) -> Bool {
         // point is considered valid if it is inside the map
         if deliveryPoint.xCoordinate > self.width {

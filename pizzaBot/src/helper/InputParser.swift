@@ -7,9 +7,21 @@
 
 import Foundation
 
+/**
+ input parser that parses the input string to a DeliveryOrder object.
+ */
 class InputParser: NSObject {
+    /// Regex for a valid input pattern
     static let inputPattern = "^(\\d+x\\d+)((\\s\\(\\d+\\,\\s\\d\\))+)"
 
+    /**
+     Parses the input string in to a DeliveryOrder object.
+     
+     - Parameters:
+     - inputString: The input string
+     
+     - Returns: The DeliveryOrder object or nil if th einput string is not the valid format.
+     */
     class func parseInput(inputString: String) -> DeliveryOrder? {
         var deliveryOrder: DeliveryOrder?
 
@@ -31,7 +43,7 @@ class InputParser: NSObject {
                                                                  in: inputString),
                                         let locationsArrayRange = Range(match.range(at: 2),
                                                                         in: inputString) {
-                                        // Create the Map
+                                        // create the Map
                                         let mapSizeInputString = String(inputString[mapSizeRange])
                                         let map = Map.init(fromString: mapSizeInputString)
 
@@ -51,6 +63,15 @@ class InputParser: NSObject {
         }
         return deliveryOrder
     }
+
+    /**
+     Creates an array of DeliveryPoints from string.
+     
+     - Parameters:
+        - fromString: The input string
+     
+     - Returns: An array of DeliveryPoint objects.
+     */
 
     class func generateDeliveryPoints(fromString: String) -> [DeliveryPoint] {
         var deliveryPoints = [DeliveryPoint]()

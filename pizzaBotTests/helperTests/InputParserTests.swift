@@ -9,7 +9,11 @@
 import XCTest
 @testable import pizzaBot
 
+/**
+ Used for testing the InputParser.
+ */
 class InputParserTests: XCTestCase {
+    /// Test to confirm the InputParser is working as expected.
     func testValidInput() {
         let input = "5x5 (0, 0) (1, 3) (4, 4) (4, 2) (4, 2) (0, 1) (3, 2) (2, 3) (4, 1)"
         let deliveryOrder = InputParser.parseInput(inputString: input)
@@ -22,6 +26,7 @@ class InputParserTests: XCTestCase {
         XCTAssertTrue(deliveryOrder?.deliveryPoints[0].yCoordinate == 0, "first delivery point y should be 0")
     }
 
+    /// Test to confirm the InputParser handles invalid inputs.
     func testInvalidInput() {
         var input = "5x5 (E, N)"
         var deliveryOrder = InputParser.parseInput(inputString: input)

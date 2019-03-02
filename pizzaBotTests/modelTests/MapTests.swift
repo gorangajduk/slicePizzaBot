@@ -9,7 +9,11 @@
 import XCTest
 @testable import pizzaBot
 
+/**
+ Used for testing the Map creation from string.
+ */
 class MapTests: XCTestCase {
+    /// Test to confirm the map is created from valid input string.
     func testValidMapCreation() {
         let input = "15x23"
         let map = Map(fromString: input)
@@ -18,6 +22,7 @@ class MapTests: XCTestCase {
         XCTAssertTrue(map?.height == 23, "map height should be 23")
     }
 
+    /// Test to confirm map is not created from invalid input string.
     func testInvalidMapCreation() {
         var input = "-13x5"
         var map = Map(fromString: input)

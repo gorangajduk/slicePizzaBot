@@ -8,7 +8,16 @@
 
 import Foundation
 
+/**
+ Slicebot class that parses and validates the input string and provides instructions on how to perform the delivery.
+ */
 class SliceBot: NSObject {
+    /**
+     Method that returns the path with instructions for delivery.
+     - Parameters:
+        -inputString: inputString containing map size and locations for the delivery
+     - Returns: String instructions for the delivery or an error message
+     */
     func deliver(input: String) -> String {
         // parse the input string to a delivery order
         if let deliveryOrder = InputParser.parseInput(inputString: input) {

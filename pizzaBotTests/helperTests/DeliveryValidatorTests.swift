@@ -9,19 +9,27 @@
 import XCTest
 @testable import pizzaBot
 
-class DeliveryValidationTests: XCTestCase {
+/**
+ Used for testing the DeliveryValidator.
+ */
+class DeliveryValidatorTests: XCTestCase {
+    /// Test to confirm the DeliveryValidator confirms valid delivery orders.
     func testvalidDelivery() {
+        // create a map
         var map = Map(sizeWidth: 10, sizeHeight: 10)
 
+        // create a few valid delivery points
         var deliveryPoints = [DeliveryPoint]()
         deliveryPoints.append(DeliveryPoint(coordinateX: 2, coordinateY: 2)!)
         deliveryPoints.append(DeliveryPoint(coordinateX: 4, coordinateY: 1)!)
         deliveryPoints.append(DeliveryPoint(coordinateX: 5, coordinateY: 0)!)
 
+        // create a delivery order
         var deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
 
         XCTAssertTrue(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be valid")
 
+        // handle an edge case
         map = Map(sizeWidth: 0, sizeHeight: 0)
 
         deliveryPoints = [DeliveryPoint]()
@@ -32,6 +40,7 @@ class DeliveryValidationTests: XCTestCase {
         XCTAssertTrue(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be valid")
     }
 
+    /// Test to confirm the DeliveryValidator flags invalid delivery orders
     func testInvalidDeliveries() {
         var map = Map(sizeWidth: 10, sizeHeight: 0)
 

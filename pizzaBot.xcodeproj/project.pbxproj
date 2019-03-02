@@ -160,9 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				D83C567D2229B31900222029 /* DeliveryOrder.swift */,
+				D83C56802229B31900222029 /* Point.swift */,
 				D83C567F2229B31900222029 /* DeliveryPoint.swift */,
 				D83C567E2229B31900222029 /* Map.swift */,
-				D83C56802229B31900222029 /* Point.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
