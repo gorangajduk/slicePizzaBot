@@ -17,35 +17,35 @@ class MapTests: XCTestCase {
     func testValidMapCreation() {
         let input = "15x23"
         let map = Map(fromString: input)
-        XCTAssertTrue(map != nil, "Map object should be created from valid input")
-        XCTAssertTrue(map?.width == 15, "map width should be 15")
-        XCTAssertTrue(map?.height == 23, "map height should be 23")
+        XCTAssertTrue(map != nil, "Map object should be created from valid input.")
+        XCTAssertTrue(map?.width == 15, "Map width should be 15.")
+        XCTAssertTrue(map?.height == 23, "Map height should be 23.")
     }
 
     /// Test to confirm map is not created from invalid input string.
     func testInvalidMapCreation() {
         var input = "-13x5"
         var map = Map(fromString: input)
-        XCTAssertNil(map, "Map object should not be created from invalid input string")
+        XCTAssertNil(map, "Map object should not be created from invalid input string.")
 
         input = "13x-5"
         map = Map(fromString: input)
-        XCTAssertNil(map, "Map object should not be created from invalid input string")
+        XCTAssertNil(map, "Map object should not be created from invalid input string.")
 
         input = "13x"
         map = Map(fromString: input)
-        XCTAssertNil(map, "Map object should not be created from invalid input string")
+        XCTAssertNil(map, "Map object should not be created from invalid input string.")
 
         input = "x5"
         map = Map(fromString: input)
-        XCTAssertNil(map, "Map object should not be created from invalid input string")
+        XCTAssertNil(map, "Map object should not be created from invalid input string.")
 
         input = "x"
         map = Map(fromString: input)
-        XCTAssertNil(map, "Map object should not be created from invalid input string")
+        XCTAssertNil(map, "Map object should not be created from invalid input string.")
 
         input = ""
         map = Map(fromString: input)
-        XCTAssertNil(map, "Map object should not be created from invalid input string")
+        XCTAssertNil(map, "Map object should not be created from invalid input string.")
     }
 }

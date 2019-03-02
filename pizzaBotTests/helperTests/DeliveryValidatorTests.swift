@@ -27,7 +27,7 @@ class DeliveryValidatorTests: XCTestCase {
         // create a delivery order
         var deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
 
-        XCTAssertTrue(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be valid")
+        XCTAssertTrue(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "Delivery should be valid.")
 
         // handle an edge case
         map = Map(sizeWidth: 0, sizeHeight: 0)
@@ -37,7 +37,7 @@ class DeliveryValidatorTests: XCTestCase {
 
         deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
 
-        XCTAssertTrue(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be valid")
+        XCTAssertTrue(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "Delivery should be valid.")
     }
 
     /// Test to confirm the DeliveryValidator flags invalid delivery orders
@@ -48,7 +48,7 @@ class DeliveryValidatorTests: XCTestCase {
         deliveryPoints.append(DeliveryPoint(coordinateX: 2, coordinateY: 2)!)
 
         var deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
-        XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be invalid")
+        XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "Delivery should be invalid.")
 
         map = Map(sizeWidth: 1, sizeHeight: 1)
 
@@ -56,7 +56,7 @@ class DeliveryValidatorTests: XCTestCase {
         deliveryPoints.append(DeliveryPoint(coordinateX: 2, coordinateY: 2)!)
 
         deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
-        XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be invalid")
+        XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "Delivery should be invalid.")
 
         map = Map(sizeWidth: 0, sizeHeight: 1)
 
@@ -64,7 +64,7 @@ class DeliveryValidatorTests: XCTestCase {
         deliveryPoints.append(DeliveryPoint(coordinateX: 2, coordinateY: 2)!)
 
         deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
-        XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be invalid")
+        XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "Delivery should be invalid.")
 
         map = Map(sizeWidth: 10, sizeHeight: 10)
 
@@ -72,7 +72,7 @@ class DeliveryValidatorTests: XCTestCase {
         deliveryPoints.append(DeliveryPoint(coordinateX: 21, coordinateY: 2)!)
 
         deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
-        XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be invalid")
+        XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "Delivery should be invalid.")
 
         map = Map(sizeWidth: 10, sizeHeight: 10)
 
@@ -80,6 +80,6 @@ class DeliveryValidatorTests: XCTestCase {
         deliveryPoints.append(DeliveryPoint(coordinateX: 1, coordinateY: 21)!)
 
         deliveryOrder = DeliveryOrder(map: map!, dPoints: deliveryPoints)
-        XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "delivery should be invalid")
+        XCTAssertFalse(DeliveryValidator.validateDelivery(delivery: deliveryOrder), "Delivery should be invalid.")
     }
 }
