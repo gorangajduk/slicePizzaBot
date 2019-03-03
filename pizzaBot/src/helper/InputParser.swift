@@ -20,7 +20,7 @@ class InputParser: NSObject {
      - Parameters:
      - inputString: The input string
      
-     - Returns: The DeliveryOrder object or nil if th einput string is not the valid format.
+     - Returns: The DeliveryOrder object or nil if the input string is not in the valid format.
      */
     class func parseInput(inputString: String) -> DeliveryOrder? {
         var deliveryOrder: DeliveryOrder?

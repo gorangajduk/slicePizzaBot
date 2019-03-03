@@ -15,7 +15,7 @@ class Point: NSObject {
     var yCoordinate: Int
 
     /**
-     Initializes a point. A point can not be created from negative coordinates.
+     Initializes a point. A point cannot be created from negative coordinates.
      
      - Parameters:
      - coordinateX: The x coordinate.
@@ -30,7 +30,7 @@ class Point: NSObject {
             self.xCoordinate = coordinateX
             self.yCoordinate = coordinateY
         } else {
-            // in this case a valid delivery point can not be created
+            // in this case a valid delivery point cannot be created
             return nil
         }
     }

@@ -15,9 +15,9 @@ class DeliveryValidator: NSObject {
      Validates a deliveryOrder. Delivery order is considered valid if all delivery points are inside the map.
      
      - Parameters:
-        - delivery the delivery ordeer that is being validated.
+     - delivery: the delivery order that is being validated.
      
-     - Returns: true if the delivery order is valid or false if the delivery order can not be completed.
+     - Returns: true if the delivery order is valid or false if the delivery order cannot be completed.
      */
     class func validateDelivery(delivery: DeliveryOrder) -> Bool {
         // iterate through all delivery points

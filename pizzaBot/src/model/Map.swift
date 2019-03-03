@@ -45,7 +45,7 @@ class Map: NSObject {
         let mapHeight = Int(mapHeightTemp)
         if (mapWidth != nil) &&
             (mapHeight != nil) {
-            // map can not be created from negative values
+            // map cannot be created from negative values
             if mapWidth! < 0 ||
                 mapHeight! < 0 {
                 return nil
@@ -72,7 +72,7 @@ class Map: NSObject {
             self.width = sizeWidth
             self.height = sizeHeight
         } else {
-            // in this case a valid map can not be created
+            // in this case a valid map cannot be created
             return nil
         }
     }
